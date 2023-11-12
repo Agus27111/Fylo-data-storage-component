@@ -58,19 +58,19 @@
     <style></style>
   </head>
   <body
-    class="bg-[url(./images/bg-mobile.png)] lg:bg-[url(./images/bg-desktop.png)] font-Raleway"
+    class="bg-[url(./images/bg-mobile.png)] lg:bg-[url(./images/bg-desktop.png)] lg:bg-no-repeat lg:bg-bottom font-Raleway"
   >
-    <section class="w-full p-10">
+    <section class="container w-full p-10">
       <div
-        class="logo flex flex-col pl-5 mt-20 mb-5 w-full text-white h-1/2 mx-auto py-5 bg-primary rounded-tr-[6rem]"
+        class="logo flex flex-col flex-wrap mt-20 mb-5 w-full lg:w-1/2 text-white h-1/2 mx-auto p-5 bg-primary rounded-tr-[6rem]"
       >
-        <img src="./images/logo.svg" alt="logo" class="w-1/2 ml-6 mt-5" />
-        <div class="icon flex items-center mr-28 pb-5 mt-8">
+        <img src="./images/logo.svg" alt="logo" class="w-1/3 ml-6 mt-5" />
+        <div class="icon flex items-center pb-5 mt-8 w-3/4">
           <!-- docs -->
           <a
             href=""
             target="_blank"
-            class="w-10 h-10 ml-6 mr-3 rounded-lg flex justify-center items-center p-3 bg-[#0c122c]"
+            class="w-10 h-10 ml-6 mr-6 rounded-lg flex justify-center items-center p-3 bg-[#0c122c]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20">
               <path
@@ -83,7 +83,7 @@
           <a
             href="#"
             target="_blank"
-            class="w-10 h-10 mr-3 rounded-lg flex justify-center items-center p-2 bg-[#0c122c]"
+            class="w-10 h-10 mr-6 rounded-lg flex justify-center items-center p-2 bg-[#0c122c]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18">
               <path
@@ -95,7 +95,7 @@
           <!-- upload -->
           <a
             href="#"
-            class="w-10 h-10 mr-3 rounded-lg flex justify-center items-center p-2 bg-[#0c122c]"
+            class="w-10 h-10 mr-6 rounded-lg flex justify-center items-center p-2 bg-[#0c122c]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16">
               <path
@@ -109,29 +109,40 @@
       </div>
 
       <div
-        class="storage bg-primary rounded-lg px-10 py-5 text-[#848794] text-xs"
+        class="storage w-full lg:w-1/2 bg-primary rounded-lg px-10 py-5 text-[#848794] text-xs relative"
       >
         <p class="w-full mb-4">
-          You’ve used <span class="text-slate-100">815 GB</span> of your storage
+          You’ve used <span class="text-slate-100 font-bold">815 GB</span> of
+          your storage
         </p>
-        <div class="box h-3 bg-[#dddbff55] rounded-full mb-4 flex items-center">
+        <div
+          class="box h-3 bg-[#dddbff55] rounded-full mb-2 flex items-start justify-center flex-col"
+        >
           <div
-            class="line flex items-end w-[80%] h-2 ml-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full block"
+            class="line flex w-[60%] absolute h-2 ml-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
           >
-            <hr class="rounded-full w-1 border-dotted border-white border-4" />
-          </div>
-          <div class="mt-4 flex">
-            <h5>0 GB</h5>
-            <h5>1000 GB</h5>
+            <hr
+              class="rounded-full relative w-1 border-dotted border-white border-4 left-[97%]"
+            />
           </div>
         </div>
-        <div class="gb">
-          <h1>185 GB Left</h1>
+        <div class="flex justify-between w-full font-bold text-white">
+          <h5 class="">0 GB</h5>
+          <h5>1000 GB</h5>
+        </div>
+        <div
+          class="gb absolute w-[42%] bg-white left-1/2 -translate-x-1/2 rounded-md p-3"
+        >
+          <h1
+            class="grid grid-cols-2 place-items-center font-bold uppercase gap-1"
+          >
+            <span class="text-black font-extrabold text-4xl">185</span> GB Left
+          </h1>
         </div>
       </div>
     </section>
 
-    <div class="attribution">
+    <div class="attribution mt-5">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
