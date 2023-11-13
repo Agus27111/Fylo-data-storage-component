@@ -41,6 +41,8 @@
           color: #848794;
           color: #1c2b66;
           color: #0c122c;
+          color: #ffa399;
+          color: #ff4d97;
         }
       }
     </style>
@@ -58,13 +60,19 @@
     <style></style>
   </head>
   <body
-    class="bg-[url(./images/bg-mobile.png)] lg:bg-[url(./images/bg-desktop.png)] lg:bg-no-repeat lg:bg-bottom font-Raleway"
+    class="bg-[url(./images/bg-mobile.png)] lg:bg-[url(./images/bg-desktop.png)] lg:bg-no-repeat lg:h-screen lg:mt-28 lg:bg-bottom font-Raleway lg:bg-[#0c122c] grid lg:place-content-center"
   >
-    <section class="container w-full p-10">
+    <section
+      class="container w-full p-10 lg:w-[1000px] lg:flex lg:flex-wrap lg:justify-center lg:relative lg:bottom-20"
+    >
+      <!-- start box logo -->
       <div
-        class="logo flex flex-col flex-wrap mt-20 mb-5 w-full lg:w-1/2 text-white h-1/2 mx-auto p-5 bg-primary rounded-tr-[6rem]"
+        class="logo flex flex-row flex-wrap mt-20 lg:mt-0 mb-5 w-full lg:w-[30%] text-white mx-auto p-5 bg-primary rounded-tr-[6rem]"
       >
-        <img src="./images/logo.svg" alt="logo" class="w-1/3 ml-6 mt-5" />
+        <div class="img">
+          <img src="./images/logo.svg" alt="logo" class="ml-6 mt-5 lg:mt-0" />
+        </div>
+
         <div class="icon flex items-center pb-5 mt-8 w-3/4">
           <!-- docs -->
           <a
@@ -107,9 +115,11 @@
           <!-- trash -->
         </div>
       </div>
+      <!-- end box logo -->
 
+      <!-- start box GB -->
       <div
-        class="storage w-full lg:w-1/2 bg-primary rounded-lg px-10 py-5 text-[#848794] text-xs relative"
+        class="storage w-full lg:w-[50%] lg:h-[70%] mx-auto bg-primary rounded-lg px-10 py-5 text-[#848794] text-xs grid lg:top-9 lg:relative"
       >
         <p class="w-full mb-4">
           You’ve used <span class="text-slate-100 font-bold">815 GB</span> of
@@ -119,7 +129,7 @@
           class="box h-3 bg-[#dddbff55] rounded-full mb-2 flex items-start justify-center flex-col"
         >
           <div
-            class="line flex w-[60%] absolute h-2 ml-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+            class="line flex w-[80%] h-2 ml-1 bg-gradient-to-r from-[#ffa399] to-[#ff4d97] rounded-full"
           >
             <hr
               class="rounded-full relative w-1 border-dotted border-white border-4 left-[97%]"
@@ -131,18 +141,20 @@
           <h5>1000 GB</h5>
         </div>
         <div
-          class="gb absolute w-[42%] bg-white left-1/2 -translate-x-1/2 rounded-md p-3"
+          class="gb absolute lg:relative lg:bottom-[140px] lg:left-[300px] w-[36%] bg-white left-1/2 -translate-x-1/2 bottom-32 rounded-md lg:rounded-br-[-20%] p-3"
         >
-          <h1
-            class="grid grid-cols-2 place-items-center font-bold uppercase gap-1"
-          >
-            <span class="text-black font-extrabold text-4xl">185</span> GB Left
+          <h1 class="grid grid-cols-2 place-items-center font-bold uppercase">
+            <span class="text-black font-extrabold text-4xl mx-2 mr-3"
+              >185</span
+            >
+            GB Left
           </h1>
         </div>
       </div>
+      <!-- end box GB -->
     </section>
 
-    <div class="attribution mt-5">
+    <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
